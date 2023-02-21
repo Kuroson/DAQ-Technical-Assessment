@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "ts-node src/server.ts",
+        "start": "ts-node src/battery_emulator.ts",
         "test": "jest --coverage=false",
         "lint": "eslint 'src/**/*.{ts,js}'",
         "build": "tsc",

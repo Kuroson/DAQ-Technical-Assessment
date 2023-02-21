@@ -57,7 +57,7 @@ tcpServer.on("connection", (socket) => {
             const currJSON = JSON.parse(msg.toString());
             if (isValidObject<DataPacket>(currJSON, ["battery_temperature", "timestamp"])) {
                 const dataPacket = currJSON;
-                if (dataPacket.battery_temperature > 80) {
+                if (dataPacket.battery_temperature > 80 || dataPacket.battery_temperature < 20) {
                     incidents.push(dataPacket);
                 }
             } else {
